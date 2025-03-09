@@ -1,0 +1,168 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+/* Background gradasi biru cerah tanpa sekat */
+body {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #abceff, #c7def3);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container utama */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 50%;
+    max-width: 600px; /* Biar tidak terlalu besar di layar besar */
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Judul */
+h1 {
+    font-size: 26px;
+    color: #003f7d;
+}
+
+/* Paragraf */
+p {
+    font-size: 18px;
+    color: #222;
+}
+
+/* Gift Box */
+.gift-box {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background-color: #add0ff;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Tutup Gift Box */
+.lid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 20px;
+    background-color: #254fab;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: top;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Badan Gift Box */
+.box {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 110px;
+    height: 90px;
+    background-color: #254fab;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Pita */
+.ribbon {
+    position: absolute;
+    top: 0;
+    left: 48px;
+    width: 14px;
+    height: 110px;
+    background-color: #eaff5f;
+    border-radius: 4px;
+}
+
+/* Animasi untuk membuka kotak */
+.open .lid {
+    transform: translateY(-35px);
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Gambar kue */
+.cake-image {
+    width: 200px;
+    max-width: 100%; /* Supaya gambar tidak keluar dari container */
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Tombol */
+.btn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #77b9ff;
+}
+
+/* ======== MEDIA QUERY UNTUK RESPONSIVE ======== */
+
+/* Untuk layar kecil (HP) */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .gift-box {
+        width: 90px;
+        height: 90px;
+    }
+
+    .lid, .box {
+        width: 90px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Untuk layar besar (Laptop) */
+@media (min-width: 1024px) {
+    .container {
+        width: 40%;
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
